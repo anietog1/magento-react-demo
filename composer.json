@@ -1,0 +1,22 @@
+{
+    "name": "agusquiw/react-demo",
+    "description": "Demos of using React in Magento",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "php": "7.4.*",
+        "agusquiw/react": "*",
+        "magento/framework": "103.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Agusquiw\\ReactDemo\\": ""
+        }
+    }
+}
