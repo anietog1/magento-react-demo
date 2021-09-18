@@ -7,4 +7,17 @@
     <head>
         <title>React Demo</title>
     </head>
+    <body>
+        <referenceContainer name="content">
+            <block
+                name="react.demo.page"
+                template="Agusquiw_ReactDemo::children_presentation.phtml"
+            >
+                <block
+                    name="react.demo.counter"
+                    template="Agusquiw_ReactDemo::components/counter.phtml"
+                />
+            </block>
+        </referenceContainer>
+    </body>
 </page>
