@@ -1,7 +1,4 @@
-define(['react', 'html', 'Magento_Customer/js/customer-data'], (
-    { useState, useCallback, useEffect },
-    html
-) => {
+define(['react', 'html'], ({ useState, useCallback, useEffect }, html) => {
     const Counter = (props) => {
         const [count, setCount] = useState(props.initialValue || 0);
         const decreaseCount = useCallback(() => setCount((count) => count - 1));
