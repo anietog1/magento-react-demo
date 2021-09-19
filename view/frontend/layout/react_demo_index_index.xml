@@ -25,6 +25,10 @@
                     name="react.demo.subscriber"
                     template="Agusquiw_ReactDemo::components/subscriber.phtml"
                 />
+                <block
+                    name="react.demo.timer"
+                    template="Agusquiw_ReactDemo::components/timer.phtml"
+                />
             </block>
         </referenceContainer>
     </body>
