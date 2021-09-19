@@ -17,6 +17,14 @@
                     name="react.demo.counter"
                     template="Agusquiw_ReactDemo::components/counter.phtml"
                 />
+                <block
+                    name="react.demo.publisher"
+                    template="Agusquiw_ReactDemo::components/publisher.phtml"
+                />
+                <block
+                    name="react.demo.subscriber"
+                    template="Agusquiw_ReactDemo::components/subscriber.phtml"
+                />
             </block>
         </referenceContainer>
     </body>
