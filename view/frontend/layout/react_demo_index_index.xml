@@ -29,6 +29,14 @@
                     name="react.demo.timer"
                     template="Agusquiw_ReactDemo::components/timer.phtml"
                 />
+                <block
+                    name="react.demo.shared_counter.1"
+                    template="Agusquiw_ReactDemo::components/shared_counter.phtml"
+                />
+                <block
+                    name="react.demo.shared_counter.2"
+                    template="Agusquiw_ReactDemo::components/shared_counter.phtml"
+                />
             </block>
         </referenceContainer>
     </body>
