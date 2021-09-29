@@ -1,5 +1,5 @@
 define(['react', 'html', 'Agusquiw_React/js/eventBus'], (
-    { useCallback, useEffect, useState },
+    { useEffect, useState },
     html,
     eventBus
 ) => {

@@ -1,4 +1,4 @@
-define(['react', 'html'], ({ useState, useCallback, useEffect }, html) => {
+define(['react', 'html'], ({ useState, useCallback }, html) => {
     const Counter = (props) => {
         const [count, setCount] = useState(props.initialValue || 0);
         const decreaseCount = useCallback(() => setCount((count) => count - 1));
