@@ -5,24 +5,34 @@ define(['react', 'html', 'Agusquiw_React/js/eventBus'], (
 ) => {
     const Subscriber = (props) => {
         const { eventName } = props;
-        const [data, setData] = useState(null);
+        const [notifications, setNotifications] = useState([]);
+        const hasNotifications = notifications.length !== 0;
 
         useEffect(() => {
-            const subscription = eventBus.subscribe(eventName, setData);
+            const subscription = eventBus.subscribe(eventName, (notification) => {
+                setNotifications((notifications) => [...notifications, notification]);
+            });
             return subscription.dispose;
         }, [eventName]);
 
         useEffect(() => {
-            if (data) {
-                const timer = setTimeout(() => setData(null), 1000);
-                return () => clearTimeout(timer);
+            if (hasNotifications) {
+                const timer = setInterval(() => {
+                    setNotifications((notifications) => notifications.splice(1));
+                }, 1000);
+                return () => clearInterval(timer);
             }
-        }, [data]);
+        }, [hasNotifications]);
 
         return html`
             <div>
                 <h3>Subscriber for: ${eventName}</h3>
-                ${data ? html`<span>${JSON.stringify(data)}</span>` : null}
+                ${notifications.map(
+                    (notification, idx) =>
+                        html`<div key=${idx}>
+                            <span>${JSON.stringify(notification)}</span>
+                        </div>`
+                )}
             </div>
         `;
     };
